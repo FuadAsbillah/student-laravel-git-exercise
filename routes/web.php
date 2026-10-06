@@ -10,3 +10,5 @@ Route::get('/', function () {
 Route::get('/contact', [ContactController::class, 'index'])->name('contact');
 Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
 Route::get('/c', fn () => redirect()->route('contact'));
+
+Route::view('/about', 'about');
